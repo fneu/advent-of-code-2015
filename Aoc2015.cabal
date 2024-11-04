@@ -15,23 +15,34 @@ extra-doc-files:    CHANGELOG.md
 common warnings
     ghc-options: -Wall
 
+common extensions
+  default-extensions: OverloadedStrings
+                    , RecordWildCards
+                    , OverloadedRecordDot
+                    , DuplicateRecordFields
+                    , NoFieldSelectors
+
 library
     import:           warnings
-    exposed-modules:  MyLib
+                    , extensions
+    exposed-modules:  DayTypes
+                    , Day01
+                    , Day02
     -- other-modules:
     -- other-extensions:
-    build-depends:    base ^>=4.20.0.0
+    build-depends:    base,
     hs-source-dirs:   src
-    default-language: GHC2024
+    default-language: GHC2021
 
 executable Aoc2015
     import:           warnings
+                    , extensions
     main-is:          Main.hs
     -- other-modules:
     -- other-extensions:
     build-depends:
-        base ^>=4.20.0.0,
+        base,
         Aoc2015
 
     hs-source-dirs:   app
-    default-language: GHC2024
+    default-language: GHC2021
