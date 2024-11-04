@@ -5,16 +5,6 @@ import Day02 (day02)
 import DayTypes (Day (..))
 import System.Environment (getArgs)
 
-choose :: String -> Day -> (String -> String)
-choose "2" = (.part2)
-choose _ = (.part1)
-
-runDay :: Day -> String -> String -> IO ()
-runDay day part file = do
-  let func = choose part day
-  input <- readFile ("input/" ++ file)
-  putStrLn $ func input
-
 main :: IO ()
 main = do
   args <- getArgs
@@ -24,3 +14,7 @@ main = do
     _ -> do
       putStrLn "Usage: program <day> <part> input/<file>"
       putStrLn "This day might not be implemented"
+  where
+    runDay day part file = readFile ("input/" ++ file) >>= putStrLn . choose part day
+    choose "2" = (.part2)
+    choose _ = (.part1)
