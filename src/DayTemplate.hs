@@ -1,4 +1,4 @@
-module Day01 (day01) where
+module Day01 where
 
 import DayTypes (Day (..))
 

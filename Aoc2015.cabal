@@ -13,7 +13,7 @@ extra-doc-files:    CHANGELOG.md
 -- extra-source-files:
 
 common warnings
-    ghc-options: -Wall
+    ghc-options: -Wall -O2
 
 common extensions
   default-extensions: OverloadedStrings
@@ -28,10 +28,17 @@ library
     exposed-modules:  DayTypes
                     , Day01
                     , Day02
+                    , Day03
+                    , Day04
+                    , Day05
+                    , Day06
     -- other-modules:
     -- other-extensions:
     build-depends:    base,
-                      trifecta
+                      trifecta,
+                      bytestring,
+                      base16-bytestring,
+                      cryptohash-md5
     hs-source-dirs:   src
     default-language: GHC2021
 

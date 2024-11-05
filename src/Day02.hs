@@ -1,7 +1,7 @@
 {-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
 
 {-# HLINT ignore "Use <$>" #-}
-module Day02 (day02) where
+module Day02 where
 
 import DayTypes (Day (..))
 import Text.Trifecta (Parser, Result (..), char, integer, parseString)
