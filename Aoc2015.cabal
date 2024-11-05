@@ -32,13 +32,17 @@ library
                     , Day04
                     , Day05
                     , Day06
+                    , Day07
+                    , Day08
+                    , Day09
     -- other-modules:
     -- other-extensions:
     build-depends:    base,
                       trifecta,
                       bytestring,
                       base16-bytestring,
-                      cryptohash-md5
+                      cryptohash-md5,
+                      containers
     hs-source-dirs:   src
     default-language: GHC2021
 
