@@ -22,6 +22,7 @@ import Day19 (day19)
 import Day20 (day20)
 import Day21 (day21)
 import Day22 (day22)
+import Day23 (day23)
 import DayTypes (Day (..))
 import System.Environment (getArgs)
 
@@ -51,6 +52,7 @@ main = do
     ["20", part, file] -> runDay day20 part file
     ["21", part, file] -> runDay day21 part file
     ["22", part, file] -> runDay day22 part file
+    ["23", part, file] -> runDay day23 part file
     _ -> do
       putStrLn "Usage: program <day> <part> input/<file>"
       putStrLn "This day might not be implemented"
